@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: white;" fx:controller="org.example.demo1.UserManagementController">
+    <VBox spacing="10" maxWidth="800">
+        <!-- Header Section -->
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 10;">
+            <CheckBox text="Select All" fx:id="selectAllCheckbox" />
+            <Button  fx:id="deleteSelectedButton" text="Delete Selected" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-padding: 8 16;" />
+        </HBox>
+
+        <!-- List Items -->
+        <VBox spacing="2" fx:id="listContainer">
+            <!-- John Doe -->
+            <VBox style="-fx-border-color: #e5e7eb; -fx-border-width: 0 0 1 0; -fx-padding: 10;">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <CheckBox />
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label text="John Doe" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                        <Label text="ID: 1" style="-fx-text-fill: #6b7280;" />
+                    </VBox>
+                    <Button text="Update" style="-fx-background-color: #f3f4f6;" />
+                    <Label text="A+" style="-fx-text-fill: #2563eb; -fx-font-weight: bold;" />
+                </HBox>
+            </VBox>
+
+            <!-- Jane Smith -->
+            <VBox style="-fx-border-color: #e5e7eb; -fx-border-width: 0 0 1 0; -fx-padding: 10;">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <CheckBox />
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label text="Jane Smith" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                        <Label text="ID: 2" style="-fx-text-fill: #6b7280;" />
+                    </VBox>
+                    <Button text="Update" style="-fx-background-color: #f3f4f6;" />
+                    <Label text="B-" style="-fx-text-fill: #2563eb; -fx-font-weight: bold;" />
+                </HBox>
+            </VBox>
+
+            <!-- Mike Johnson -->
+            <VBox style="-fx-border-color: #e5e7eb; -fx-border-width: 0 0 1 0; -fx-padding: 10;">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <CheckBox />
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label text="Mike Johnson" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                        <Label text="ID: 3" style="-fx-text-fill: #6b7280;" />
+                    </VBox>
+                    <Button text="Update" style="-fx-background-color: #f3f4f6;" />
+                    <Label text="O+" style="-fx-text-fill: #2563eb; -fx-font-weight: bold;" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </VBox>
+</StackPane>

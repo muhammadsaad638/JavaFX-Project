@@ -1,0 +1,293 @@
+/* Base Styles */
+.main-scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.main-scroll-pane > .viewport {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+/* Header Styles */
+.header-container {
+    -fx-background-color: #ef233c;
+    -fx-padding: 30px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.wave-shape {
+    -fx-fill: #ef233c;
+    -fx-stroke: none;
+    -fx-content: "M 0 50 Q 100 0 200 50 T 400 50 V 0 H 0 Z";
+}
+
+.header-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.header-subtitle {
+    -fx-font-size: 14px;
+    -fx-fill: rgba(255, 255, 255, 0.9);
+    -fx-font-style: italic;
+}
+
+/* Circular back button styling */
+.back-button {
+    -fx-background-color: white;
+    -fx-background-radius: 50%;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-padding: 0;
+    -fx-content-display: graphic-only;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 1);
+}
+
+.back-button:hover {
+    -fx-background-color: #f5f6f7;
+    -fx-border-color: #cccccc;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 6, 0, 0, 2);
+}
+
+.back-button:pressed {
+    -fx-background-color: #eeeeee;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, 1);
+}
+
+.back-button .arrow {
+    -fx-fill: #666666;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.back-button:hover .arrow {
+    -fx-fill: #444444;
+}
+
+/* Content Styles */
+.content-container {
+    -fx-padding: 20px;
+    -fx-spacing: 30px;
+}
+
+/* Blood Drops Animation */
+.blood-drops-container {
+    -fx-padding: 20px 0;
+}
+
+.blood-drop {
+    -fx-fill: #ef233c;
+    -fx-stroke: none;
+    -fx-opacity: 0.9;
+}
+
+.drop-1 {
+    -fx-animation: dropPulse 2s infinite;
+}
+
+.drop-2 {
+    -fx-animation: dropPulse 2s infinite;
+    -fx-animation-delay: 0.6s;
+}
+
+.drop-3 {
+    -fx-animation: dropPulse 2s infinite;
+    -fx-animation-delay: 1.2s;
+}
+
+@keyframes dropPulse {
+    0% { -fx-scale-x: 1; -fx-scale-y: 1; -fx-opacity: 0.9; }
+    50% { -fx-scale-x: 1.2; -fx-scale-y: 1.2; -fx-opacity: 0.7; }
+    100% { -fx-scale-x: 1; -fx-scale-y: 1; -fx-opacity: 0.9; }
+}
+
+/* Form Container */
+.form-container {
+    -fx-background-color: white;
+    -fx-padding: 30px;
+    -fx-spacing: 20px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* Progress Bar */
+.registration-progress {
+    -fx-pref-width: 100%;
+    -fx-accent: #ef233c;
+}
+
+/* Input Groups */
+.input-group {
+    -fx-spacing: 5px;
+}
+
+.field-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2b2d42;
+}
+
+.input-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px;
+    -fx-font-size: 14px;
+    -fx-transition: all 0.3s ease;
+}
+
+.input-field:focused {
+    -fx-border-color: #ef233c;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(239,35,60,0.1), 5, 0, 0, 0);
+}
+
+/* Validation Labels */
+.validation-label {
+    -fx-text-fill: #ef233c;
+    -fx-font-size: 12px;
+}
+
+.error-label {
+    -fx-text-fill: #ef233c;
+    -fx-font-size: 12px;
+    -fx-alignment: center;
+}
+
+/* Register Button */
+.register-button {
+    -fx-background-color: #ef233c;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 12px 24px;
+    -fx-background-radius: 25px;
+    -fx-cursor: hand;
+    -fx-min-width: 200px;
+    -fx-animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+    0% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.02; -fx-scale-y: 1.02; }
+    100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+}
+
+.register-button:hover {
+    -fx-background-color: #d90429;
+    -fx-effect: dropshadow(gaussian, rgba(239,35,60,0.4), 10, 0, 0, 0);
+}
+
+.register-button:pressed {
+    -fx-background-color: #bf0603;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Footer */
+.footer-container {
+    -fx-padding: 20px;
+    -fx-spacing: 5px;
+}
+
+.footer-text {
+    -fx-font-size: 16px;
+    -fx-fill: #2b2d42;
+    -fx-text-alignment: center;
+}
+
+.footer-subtext {
+    -fx-font-size: 14px;
+    -fx-fill: #6c757d;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .header-title {
+        -fx-font-size: 20px;
+    }
+
+    .form-container {
+        -fx-padding: 20px;
+    }
+
+    .register-button {
+        -fx-min-width: 150px;
+        -fx-font-size: 14px;
+    }
+}
+
+.content-container {
+    -fx-background-color: transparent;
+}
+
+.blood-drops-container {
+    -fx-padding: 30 0;
+    -fx-alignment: center;
+}
+
+.blood-drop {
+    -fx-fill: #ef233c;
+    -fx-stroke: none;
+    -fx-opacity: 0.9;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+    -fx-smooth: true;
+}
+
+.drop-1 {
+    -fx-animation: dropPulse 2s infinite, dropFloat 3s infinite;
+}
+
+.drop-2 {
+    -fx-animation: dropPulse 2s infinite, dropFloat 3s infinite;
+    -fx-animation-delay: 0.6s;
+}
+
+.drop-3 {
+    -fx-animation: dropPulse 2s infinite, dropFloat 3s infinite;
+    -fx-animation-delay: 1.2s;
+}
+
+.blood-drop:hover {
+    -fx-effect: dropshadow(gaussian, rgba(239,35,60,0.4), 10, 0, 0, 0);
+    -fx-cursor: hand;
+    -fx-fill: #d90429;
+}
+
+@keyframes dropPulse {
+    0% {
+        -fx-scale-x: 0.8;
+        -fx-scale-y: 0.8;
+        -fx-opacity: 0.9;
+    }
+    50% {
+        -fx-scale-x: 0.85;
+        -fx-scale-y: 0.85;
+        -fx-opacity: 0.7;
+    }
+    100% {
+        -fx-scale-x: 0.8;
+        -fx-scale-y: 0.8;
+        -fx-opacity: 0.9;
+    }
+}
+
+@keyframes dropFloat {
+    0% {
+        -fx-translate-y: 0;
+    }
+    50% {
+        -fx-translate-y: -8;
+    }
+    100% {
+        -fx-translate-y: 0;
+    }
+}

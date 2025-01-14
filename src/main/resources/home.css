@@ -1,0 +1,550 @@
+/* Root Styles */
+
+.inboxLabel{
+    -fx-color: red;
+    -fx-text-fill: red;
+}
+.root {
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Main Container */
+.main-container {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    -fx-padding: 10 20;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-spacing: 20;
+}
+
+.app-name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E53935;
+    -fx-padding: 0 0 0 10;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #424242;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-text-fill: #E53935;
+}
+
+.emergency-button {
+    -fx-background-color: #FF5252;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.emergency-button:hover {
+    -fx-background-color: #FF1744;
+}
+
+/* Welcome Section */
+.welcome-section {
+    -fx-padding: 40 0;
+}
+
+.welcome-text {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.highlight-text {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E53935;
+}
+
+.sub-text {
+    -fx-font-size: 18px;
+    -fx-text-fill: #757575;
+    -fx-padding: 10 0 0 0;
+}
+
+/* Action Cards */
+.action-buttons {
+    -fx-padding: 20 0 40 0;
+}
+
+.action-card {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 30;
+    -fx-spacing: 15;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-min-width: 250;
+}
+
+.card-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.card-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #757575;
+}
+
+.primary-button {
+    -fx-background-color: #E53935;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #D32F2F;
+    -fx-effect: dropshadow(gaussian, rgba(229,57,53,0.3), 10, 0, 0, 5);
+}
+
+.secondary-button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #E53935;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+    -fx-background-radius: 25;
+    -fx-border-color: #E53935;
+    -fx-border-width: 2;
+    -fx-border-radius: 25;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #FFEBEE;
+}
+
+/* Information Cards */
+.info-section {
+    -fx-padding: 20 0;
+}
+
+.info-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-background-radius: 10;
+    -fx-min-width: 200;
+    -fx-alignment: CENTER;
+}
+
+.info-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.info-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #757575;
+}
+
+.info-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E53935;
+    -fx-font-size: 14px;
+    -fx-padding: 5 10;
+    -fx-cursor: hand;
+}
+
+.info-button:hover {
+    -fx-underline: true;
+}
+
+/* Blood Availability Section */
+.availability-section {
+    -fx-padding: 20;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+    -fx-padding: 0 0 10 0;
+}
+
+.blood-grid {
+    -fx-padding: 10;
+}
+
+.blood-type {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E53935;
+}
+
+.blood-level {
+    -fx-min-width: 150;
+}
+
+.blood-level .bar {
+    -fx-background-color: #E53935;
+}
+
+.blood-level .track {
+    -fx-background-color: #FFCDD2;
+}
+
+/* Footer */
+.footer {
+    -fx-padding: 20;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1 0 0 0;
+}
+
+.footer-text {
+    -fx-text-fill: #757575;
+    -fx-font-size: 14px;
+}
+
+.footer-link {
+    -fx-text-fill: #757575;
+    -fx-font-size: 14px;
+    -fx-border-color: transparent;
+}
+
+.footer-link:hover {
+    -fx-text-fill: #E53935;
+}
+/* Root Styles */
+.root {
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* ScrollPane Styles */
+.main-scroll-pane {
+    -fx-background: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.main-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.content-scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.content-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Hide scroll bars but keep functionality */
+.main-scroll-pane .scroll-bar:vertical,
+.content-scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 5;
+}
+
+.main-scroll-pane .scroll-bar:horizontal,
+.content-scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-padding: 5 0 0 0;
+}
+
+/* Main Container */
+.main-container {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-min-width: 300px; /* Minimum width for mobile */
+}
+
+/* Navigation Bar */
+.nav-bar {
+    -fx-padding: 10 20;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-spacing: 20;
+    -fx-min-height: 60;
+}
+
+/* Responsive Nav Buttons */
+.nav-buttons {
+    -fx-spacing: 15;
+    -fx-wrap-text: true;
+}
+
+@media screen and (max-width: 600) {
+    .nav-buttons {
+        -fx-spacing: 5;
+    }
+
+    .nav-button, .emergency-button {
+        -fx-padding: 5 10;
+        -fx-font-size: 12px;
+    }
+}
+
+.app-name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E53935;
+    -fx-padding: 0 0 0 10;
+}
+
+/* Welcome Section - Responsive Text */
+.welcome-section {
+    -fx-padding: 40 0;
+}
+
+.welcome-text {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.highlight-text {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E53935;
+}
+
+.sub-text {
+    -fx-font-size: 18px;
+    -fx-text-fill: #757575;
+    -fx-padding: 10 0 0 0;
+}
+
+/* Responsive text sizes for smaller screens */
+@media screen and (max-width: 600) {
+    .welcome-text {
+        -fx-font-size: 28px;
+    }
+
+    .highlight-text {
+        -fx-font-size: 36px;
+    }
+
+    .sub-text {
+        -fx-font-size: 16px;
+    }
+}
+
+/* Action Cards - Using FlowPane for responsiveness */
+.action-buttons {
+    -fx-padding: 20;
+    -fx-min-width: 300px;
+}
+
+.action-card {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 30;
+    -fx-spacing: 15;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-min-width: 250;
+    -fx-max-width: 300;
+}
+
+/* Info Section - Using FlowPane for responsiveness */
+.info-section {
+    -fx-padding: 20;
+    -fx-min-width: 300px;
+}
+
+.info-card {
+    -fx-background-color: #F5F5F5;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-background-radius: 10;
+    -fx-min-width: 200;
+    -fx-max-width: 250;
+    -fx-alignment: CENTER;
+}
+
+/* Blood Availability Section - Responsive Grid */
+.availability-section {
+    -fx-padding: 20;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-min-width: 300px;
+}
+
+.blood-grid {
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+/* Responsive Footer */
+.footer {
+    -fx-padding: 20;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1 0 0 0;
+    -fx-min-width: 300px;
+}
+
+.footer-links {
+    -fx-min-width: 200px;
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    -fx-padding: 40 20;
+    -fx-spacing: 20;
+}
+
+/* Modern Minimal Verse Container */
+.verse-container-modern {
+    -fx-padding: 40 30;
+    -fx-spacing: 25;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E53935;
+    -fx-border-width: 0 0 0 3;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 5);
+    -fx-min-width: 600;
+    -fx-max-width: 800;
+    -fx-alignment: CENTER;
+}
+
+/* Arabic Verse Text */
+.arabic-verse-modern {
+    -fx-fill: #E53935;
+    -fx-text-alignment: CENTER;
+    -fx-font-family: "Amiri", "Traditional Arabic", "Arial";
+    -fx-font-size: 36px;
+}
+
+/* English Translation */
+.verse-translation-modern {
+    -fx-fill: #424242;
+    -fx-text-alignment: CENTER;
+    -fx-font-family: "Segoe UI Light", "Arial";
+    -fx-font-size: 20px;
+}
+
+/* Verse Reference */
+.verse-reference-modern {
+    -fx-fill: #9E9E9E;
+    -fx-text-alignment: CENTER;
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 14px;
+}
+
+/* Welcome Title */
+.welcome-title {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 28px;
+    -fx-text-fill: #424242;
+}
+
+/* Welcome Subtitle */
+.welcome-subtitle {
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-size: 18px;
+    -fx-text-fill: #757575;
+}
+
+/* Hover effect for the verse container */
+.verse-container-modern:hover {
+    -fx-effect: dropshadow(gaussian, rgba(229,57,53,0.1), 15, 0, 0, 8);
+    -fx-border-width: 0 0 0 4;
+}
+
+
+/* Hover Effects */
+.verse-container-modern:hover {
+    -fx-effect: dropshadow(gaussian, rgba(229,57,53,0.1), 15, 0, 0, 8);
+    -fx-border-width: 0 0 0 4;
+    -fx-translate-x: 1;
+}
+
+/* Responsive Design */
+/* Large screens */
+@media screen and (min-width: 1200) {
+    .verse-container-modern {
+        -fx-max-width: 1000;
+        -fx-padding: 50 40;
+    }
+
+    .arabic-verse-modern {
+        -fx-font-size: 42px;
+    }
+
+    .verse-translation-modern {
+        -fx-font-size: 22px;
+    }
+}
+
+/* Medium screens */
+@media screen and (max-width: 800) {
+    .verse-container-modern {
+        -fx-padding: 30 20;
+        -fx-pref-width: 90%;
+    }
+
+    .arabic-verse-modern {
+        -fx-font-size: 32px;
+    }
+
+    .verse-translation-modern {
+        -fx-font-size: 18px;
+    }
+
+    .welcome-title {
+        -fx-font-size: 24px;
+    }
+
+    .welcome-subtitle {
+        -fx-font-size: 16px;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 600) {
+    .welcome-section {
+        -fx-padding: 20 10;
+    }
+
+    .verse-container-modern {
+        -fx-padding: 20 15;
+        -fx-pref-width: 95%;
+        -fx-spacing: 15;
+    }
+
+    .arabic-verse-modern {
+        -fx-font-size: 28px;
+    }
+
+    .verse-translation-modern {
+        -fx-font-size: 16px;
+    }
+
+    .welcome-title {
+        -fx-font-size: 20px;
+    }
+
+    .welcome-subtitle {
+        -fx-font-size: 14px;
+    }
+}

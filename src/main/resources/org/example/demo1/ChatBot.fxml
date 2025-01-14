@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="400" prefWidth="250" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.ChatBotController">
+    <!-- Chat Window -->
+    <VBox fx:id="chatWindow" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2); -fx-background-radius: 10;" styleClass="chat-window">
+
+
+        <!-- Chat Header -->
+        <HBox style="-fx-background-color: #2196F3; -fx-padding: 10; " styleClass="chat-header">
+            <Label style="-fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold;" styleClass="header-text" text="Chat Support" />
+            <Region HBox.hgrow="ALWAYS" />
+        </HBox>
+
+        <!-- Chat Messages Area -->
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" VBox.vgrow="ALWAYS">
+            <VBox fx:id="messagesArea" style="-fx-padding: 10; -fx-spacing: 10; -fx-background-color: #f5f5f5;" styleClass="messages-area">
+            <children>
+               <Label style="-fx-text-fill: black;" text="Hey! Need any help? Feel free to ask." />
+            </children></VBox>
+        </ScrollPane>
+
+        <!-- Input Area -->
+        <HBox style="-fx-padding: 10; -fx-spacing: 10; -fx-background-color: #f8f9fa;" styleClass="input-area">
+            <TextField fx:id="messageInput" promptText="Type your message..." style="-fx-background-radius: 20; -fx-padding: 8; -fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 20;" HBox.hgrow="ALWAYS" />
+            <Button fx:id="sendButton" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 15;" styleClass="send-button" text="Send" />
+        </HBox>
+    </VBox>
+</StackPane>

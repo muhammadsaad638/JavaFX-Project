@@ -1,0 +1,258 @@
+/* Root Styles */
+.root-container {
+    -fx-background-color: #f8f9fa;
+}
+
+.main-scroll-pane {
+    -fx-background: #f8f9fa;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.main-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Master Container */
+.master-container {
+    -fx-background-color: transparent;
+    -fx-padding: 20px;
+    -fx-spacing: 30px;
+    -fx-alignment: top-center;
+    -fx-max-width: 1200px;
+    -fx-min-width: 280px;
+}
+
+/* Header Section */
+.header-section {
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-alignment: center;
+}
+
+.title-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #2d3436;
+}
+
+/* Form Section */
+.form-section {
+    -fx-background-color: white;
+    -fx-padding: 30px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-max-width: 800px;
+    -fx-min-width: 280px;
+}
+
+/* Input Groups */
+.input-group {
+    -fx-spacing: 5px;
+    -fx-fill-width: true;
+}
+
+.input-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+    -fx-font-weight: bold;
+}
+
+.input-field {
+    -fx-pref-height: 40px;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #74b9ff;
+    -fx-border-width: 2px;
+}
+
+/* Buttons */
+.skip-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6c757d;
+    -fx-border-color: #6c757d;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.skip-button:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.submit-section {
+    -fx-padding: 20px 0;
+}
+
+.submit-button {
+    -fx-background-color: #0984e3;
+    -fx-text-fill: white;
+    -fx-padding: 12px 40px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 200px;
+}
+
+.submit-button:hover {
+    -fx-background-color: #0878d2;
+}
+
+/* Error States */
+.error-field {
+    -fx-border-color: #d63031 !important;
+    -fx-background-color: #fff8f8 !important;
+}
+
+.error-label {
+    -fx-text-fill: #d63031;
+    -fx-font-size: 12px;
+}
+
+/* Responsive Breakpoints */
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+    .master-container {
+        -fx-padding: 10px;
+        -fx-spacing: 15px;
+    }
+
+    .form-section {
+        -fx-padding: 15px;
+    }
+
+    .input-field {
+        -fx-pref-width: 100%;
+        -fx-min-width: 200px;
+    }
+
+    .title-text {
+        -fx-font-size: 20px;
+    }
+
+    .submit-button {
+        -fx-min-width: 150px;
+        -fx-padding: 10px 30px;
+    }
+}
+
+/* Medium screens (tablet) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .master-container {
+        -fx-padding: 15px;
+        -fx-spacing: 20px;
+    }
+
+    .form-section {
+        -fx-padding: 20px;
+    }
+
+    .input-field {
+        -fx-pref-width: 100%;
+        -fx-min-width: 300px;
+    }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 769px) {
+    .master-container {
+        -fx-padding: 30px;
+        -fx-spacing: 30px;
+    }
+
+    .form-section {
+        -fx-padding: 40px;
+    }
+
+    .input-field {
+        -fx-pref-width: 100%;
+        -fx-min-width: 400px;
+    }
+}
+
+/* ComboBox Specific Styles */
+.combo-box {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 5px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #74b9ff;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 8px 12px;
+}
+
+.combo-box .list-view {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* DatePicker Specific Styles */
+.date-picker {
+    -fx-background-color: #f8f9fa;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.date-picker .cell {
+    -fx-background-color: white;
+    -fx-padding: 8px;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color: #74b9ff;
+    -fx-text-fill: white;
+}
+
+/* Scroll Bar Styling */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12px;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #b2bec3;
+    -fx-background-radius: 6px;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+/* High DPI Screens */
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .input-field {
+        -fx-border-width: 0.5px;
+    }
+
+    .form-section {
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);
+    }
+}

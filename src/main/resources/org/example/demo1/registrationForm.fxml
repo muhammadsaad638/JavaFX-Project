@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
+
+<ScrollPane fitToWidth="true" styleClass="main-scroll-pane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.RegistrationController">
+    <content>
+        <AnchorPane prefWidth="600.0" prefHeight="400.0" styleClass="main-container">
+            <children>
+                <VBox spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <!-- Header Section with Wave Shape -->
+                    <StackPane styleClass="header-container">
+                        <Path styleClass="wave-shape" />
+                        <VBox alignment="CENTER" spacing="10">
+                            <HBox alignment="CENTER_LEFT" spacing="15">
+                                <Button fx:id="backButton" onAction="#backToMainScreen" styleClass="back-button"
+                                        StackPane.alignment="TOP_LEFT">
+                                    <graphic>
+                                        <SVGPath styleClass="arrow" content="M20,11H7.83l5.59-5.59L12,4l-8,8l8,8l1.41-1.41L7.83,13H20V11z"/>
+                                    </graphic>
+                                    <StackPane.margin>
+                                        <Insets top="20" left="20"/>
+                                    </StackPane.margin>
+                                </Button>
+                                <Label styleClass="header-title" text="Join Our Community" wrapText="true" />
+                            </HBox>
+                            <Text styleClass="header-subtitle" text="Every drop counts in saving lives" />
+                        </VBox>
+                    </StackPane>
+
+                    <!-- Main Content -->
+                    <VBox styleClass="content-container">
+                        <!-- Animated Blood Drops Container -->
+                        <HBox alignment="CENTER" spacing="40" styleClass="blood-drops-container">
+                            <SVGPath styleClass="blood-drop, drop-1">
+                                <content>
+                                    M 20 0
+                                    C 30 20, 40 30, 40 45
+                                    C 40 55, 32 60, 20 60
+                                    C 8 60, 0 55, 0 45
+                                    C 0 30, 10 20, 20 0
+                                    M 12 25
+                                    C 15 35, 18 40, 18 45
+                                    C 18 47, 16 48, 14 48
+                                    C 12 48, 10 47, 10 45
+                                    C 10 40, 11 35, 12 25
+                                </content>
+                            </SVGPath>
+
+                            <SVGPath styleClass="blood-drop, drop-2">
+                                <content>
+                                    M 20 0
+                                    C 30 20, 40 30, 40 45
+                                    C 40 55, 32 60, 20 60
+                                    C 8 60, 0 55, 0 45
+                                    C 0 30, 10 20, 20 0
+                                    M 12 25
+                                    C 15 35, 18 40, 18 45
+                                    C 18 47, 16 48, 14 48
+                                    C 12 48, 10 47, 10 45
+                                    C 10 40, 11 35, 12 25
+                                </content>
+                            </SVGPath>
+
+                            <SVGPath styleClass="blood-drop, drop-3">
+                                <content>
+                                    M 20 0
+                                    C 30 20, 40 30, 40 45
+                                    C 40 55, 32 60, 20 60
+                                    C 8 60, 0 55, 0 45
+                                    C 0 30, 10 20, 20 0
+                                    M 12 25
+                                    C 15 35, 18 40, 18 45
+                                    C 18 47, 16 48, 14 48
+                                    C 12 48, 10 47, 10 45
+                                    C 10 40, 11 35, 12 25
+                                </content>
+                            </SVGPath>
+                        </HBox>
+
+                        <!-- Form Container with Card Effect -->
+                        <VBox styleClass="form-container">
+                            <!-- Progress Indicator -->
+                            <ProgressBar styleClass="registration-progress" progress="0.33" />
+
+                            <!-- Username Field -->
+                            <VBox styleClass="input-group">
+                                <Label styleClass="field-label" text="Username" />
+                                <TextField fx:id="userNameField" onAction="#validateCredentials" promptText="Enter your username" styleClass="input-field" />
+                                <Label fx:id="userNameValidationLabel" styleClass="validation-label" />
+                            </VBox>
+
+                            <!-- Email Field -->
+                            <VBox styleClass="input-group">
+                                <Label styleClass="field-label" text="Email Address" />
+                                <TextField fx:id="emailField" promptText="Enter your email" styleClass="input-field" />
+                                <Label fx:id="emailValidationLabel" styleClass="validation-label" />
+                            </VBox>
+
+                            <!-- Password Field -->
+                            <VBox styleClass="input-group">
+                                <Label styleClass="field-label" text="Password" />
+                                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="input-field" />
+                            </VBox>
+
+                            <Label fx:id="invalidCredentialsLabel" styleClass="error-label" />
+
+                            <!-- Register Button with Pulse Animation -->
+                            <Button fx:id="registerButton" mnemonicParsing="false" onAction="#register" styleClass="register-button" text="Join Now" />
+                        </VBox>
+                    </VBox>
+
+                    <!-- Footer -->
+                    <VBox styleClass="footer-container" alignment="CENTER">
+                        <Text styleClass="footer-text" text="Together, we can make a difference" />
+                        <Text styleClass="footer-subtext" text="Join our community of life-savers today" />
+                    </VBox>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

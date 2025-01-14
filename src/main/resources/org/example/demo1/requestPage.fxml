@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('..\simplified-bg.png');" styleClass="main-scroll-pane" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.RequestPageController">
+
+    <VBox spacing="20" styleClass="main-container">
+        <!-- Navigation Bar -->
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="nav-bar">
+            <Button fx:id="backButton" onAction="#handleBack" styleClass="back-button" text="← Back" />
+            <HBox HBox.hgrow="ALWAYS" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/blood-app-icon.png" />
+            </ImageView>
+        </HBox>
+
+        <!-- Main Content Container with max width for better readability -->
+        <StackPane>
+            <VBox maxWidth="1200" spacing="24" styleClass="content-container">
+                <!-- Header Section -->
+                <VBox alignment="CENTER" spacing="12" styleClass="header-container">
+                    <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                          <Image url="@/blood-app-icon.png" />
+                    </ImageView>
+                    <Text styleClass="page-title" text="Blood Request" />
+                    <Text styleClass="page-subtitle" text="Fill in the details below to find matching donors" />
+                </VBox>
+
+                <!-- Request Form Section -->
+                <VBox styleClass="form-container">
+                    <Text styleClass="section-title" text="Personal Information" />
+
+                    <!-- Form Grid with responsive columns -->
+                    <GridPane hgap="20" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints maxWidth="180" minWidth="120" />
+                            <ColumnConstraints maxWidth="Infinity" minWidth="250" />
+                        </columnConstraints>
+
+                        <!-- Form Fields -->
+                        <Label styleClass="form-label" text="Full Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <TextField fx:id="fullNameField" promptText="Enter your full name" styleClass="form-field" />
+                        </VBox>
+
+                        <Label styleClass="form-label" text="Phone Number" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <TextField fx:id="phoneNumberField" promptText="Enter your phone number" styleClass="form-field" />
+                        </VBox>
+
+                        <Label styleClass="form-label" text="Blood Type" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <ComboBox fx:id="bloodTypeCombo" maxWidth="200" promptText="Select Blood Type" styleClass="form-field">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="A+" />
+                                        <String fx:value="A-" />
+                                        <String fx:value="B+" />
+                                        <String fx:value="B-" />
+                                        <String fx:value="AB+" />
+                                        <String fx:value="AB-" />
+                                        <String fx:value="O+" />
+                                        <String fx:value="O-" />
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+
+                        <Label styleClass="form-label" text="Hospital Address" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <TextField fx:id="hospitalAddressField" promptText="Enter hospital address" styleClass="form-field">
+                                <contextMenu>
+                                    <ContextMenu fx:id="suggestionsMenu" />
+                                </contextMenu>
+                            </TextField>
+                        </VBox>
+
+                        <Label styleClass="form-label" text="Relationship" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <ComboBox fx:id="relationshipCombo" maxWidth="200" promptText="Select Relationship" styleClass="form-field">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Self" />
+                                        <String fx:value="Family" />
+                                        <String fx:value="Friend" />
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <!-- Search Button Container -->
+                    <HBox alignment="CENTER" spacing="15" styleClass="button-container">
+                        <Button fx:id="searchButton" onAction="#showDonors" styleClass="search-button" text="Find Donors" />
+                    </HBox>
+                </VBox>
+
+                <!-- Results Section -->
+                <VBox styleClass="results-container">
+                    <HBox alignment="CENTER_LEFT" spacing="15">
+                        <Text styleClass="section-title" text="Available Donors" />
+                        <Text fx:id="matchesText" styleClass="results-count" text="" />
+
+                        <!-- Sort/Filter Options -->
+                        <HBox HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="sortComboBox" promptText="Sort by" styleClass="filter-combo">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Distance" />
+                                    <String fx:value="Age" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                    </HBox>
+
+                    <!-- Donors Grid -->
+                    <ScrollPane fitToWidth="true" styleClass="donors-scroll-pane">
+                        <FlowPane fx:id="donorCardsContainer" hgap="20" styleClass="donors-grid" vgap="20">
+                            <!-- Donor Cards -->
+                            <VBox styleClass="donor-card">
+                                <HBox spacing="12" styleClass="donor-header">
+                                    <ImageView fitHeight="48.0" fitWidth="48.0" styleClass="donor-avatar">
+<!--                                        <Image url="@/images/profile-placeholder.png"/>-->
+                                    </ImageView>
+                                    <VBox spacing="4">
+                                        <Text styleClass="donor-name" text="Muhammad Ali" />
+                                        <HBox spacing="8" styleClass="donor-meta">
+                                            <Text styleClass="donor-location" text="Karachi" />
+                                            <Text styleClass="donor-status" text="Active 2h ago" />
+                                        </HBox>
+                                    </VBox>
+                                </HBox>
+
+                                <HBox spacing="12" styleClass="donor-stats">
+                                    <VBox styleClass="stat-item" HBox.hgrow="ALWAYS">
+                                        <Text styleClass="stat-value" text="A+" />
+                                        <Text styleClass="stat-label" text="Blood Type" />
+                                    </VBox>
+                                    <VBox styleClass="stat-item" HBox.hgrow="ALWAYS">
+                                        <Text styleClass="stat-value" text="7 km" />
+                                        <Text styleClass="stat-label" text="Distance" />
+                                    </VBox>
+                                    <VBox styleClass="stat-item" HBox.hgrow="ALWAYS">
+                                        <Text styleClass="stat-value" text="5" />
+                                        <Text styleClass="stat-label" text="Donations" />
+                                    </VBox>
+                                </HBox>
+
+                                <Button styleClass="request-button" text="Chat with donor" />
+                            </VBox>
+
+                            <!-- Additional donor cards with same structure -->
+
+                        </FlowPane>
+                    </ScrollPane>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </VBox>
+</ScrollPane>

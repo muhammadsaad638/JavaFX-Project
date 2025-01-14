@@ -1,0 +1,134 @@
+/* Root styles */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #ffffff, #f0f2f5);
+}
+
+.anchor-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 20px;
+}
+
+/* Card container for login form */
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 4);
+    -fx-padding: 30px;
+}
+
+/* Logo/Title styling */
+.app-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e41749;  /* Blood red color */
+    -fx-effect: dropshadow(gaussian, rgba(228, 23, 73, 0.2), 5, 0, 0, 1);
+}
+
+.app-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+    -fx-padding: 0 0 20px 0;
+}
+
+/* Form field styling */
+.text-field {
+    -fx-background-color: #f5f6f7;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5px;
+    -fx-padding: 12px 15px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #999999;
+}
+
+.text-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #e41749;
+    -fx-effect: dropshadow(gaussian, rgba(228, 23, 73, 0.1), 5, 0, 0, 0);
+}
+
+/* Label styling */
+.label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #444444;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5px 0;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #e41749;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 30px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(228, 23, 73, 0.2), 5, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #c41540;
+}
+
+.button:pressed {
+    -fx-background-color: #a81238;
+}
+
+.back-button {
+    -fx-background-color: white;
+    -fx-background-radius: 50%;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-padding: 0;
+    -fx-content-display: graphic-only;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 1);
+}
+
+.back-button:hover {
+    -fx-background-color: #f5f6f7;
+    -fx-border-color: #cccccc;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 6, 0, 0, 2);
+}
+
+.back-button:pressed {
+    -fx-background-color: #eeeeee;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, 1);
+}
+
+.back-button .arrow {
+    -fx-fill: #666666;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.back-button:hover .arrow {
+    -fx-fill: #444444;
+}
+/* Error message styling */
+.error-label {
+    -fx-text-fill: #e41749;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 0 0 0;
+    -fx-opacity: 0;
+}
+
+.error-label.visible {
+    -fx-opacity: 1;
+}
+
+/* Animation classes */
+.shake {
+    -fx-animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { -fx-translate-x: 0; }
+    10%, 30%, 50%, 70%, 90% { -fx-translate-x: -5px; }
+    20%, 40%, 60%, 80% { -fx-translate-x: 5px; }
+}

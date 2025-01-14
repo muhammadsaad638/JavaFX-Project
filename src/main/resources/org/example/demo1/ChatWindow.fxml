@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.demo1.ChatController"
+      styleClass="chat-window">
+
+    <!-- Header -->
+    <HBox styleClass="chat-header">
+        <padding>
+            <Insets top="10" right="15" bottom="10" left="15"/>
+        </padding>
+
+        <StackPane styleClass="avatar-container">
+            <Circle fx:id="avatarCircle" radius="20" styleClass="avatar-circle"/>
+            <Text fx:id="avatarText" styleClass="avatar-text"/>
+        </StackPane>
+
+        <VBox styleClass="header-info">
+            <Label fx:id="chatName" styleClass="chat-name"/>
+            <Label fx:id="statusLabel" styleClass="status-label"/>
+        </VBox>
+    </HBox>
+
+    <!-- Chat Messages Area -->
+    <ScrollPane fitToWidth="true" styleClass="chat-scroll-pane" VBox.vgrow="ALWAYS">
+        <ListView fx:id="messageList" styleClass="message-list"/>
+    </ScrollPane>
+
+    <!-- Message Input Area -->
+    <HBox styleClass="message-input-area">
+        <padding>
+            <Insets top="10" right="15" bottom="10" left="15"/>
+        </padding>
+
+        <!-- Attach button -->
+        <Button styleClass="attach-button" text="+" />
+
+        <!-- Message input -->
+        <TextField fx:id="messageInput"
+                   styleClass="message-input"
+                   HBox.hgrow="ALWAYS"
+                   promptText="Type a message..."/>
+
+        <!-- Send button -->
+        <Button text="Send"
+                onAction="#sendMessage"
+                styleClass="send-button"/>
+    </HBox>
+</VBox>

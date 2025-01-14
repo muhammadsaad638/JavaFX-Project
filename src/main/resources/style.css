@@ -1,0 +1,67 @@
+/* style.css */
+.main-pane {
+    -fx-background-color: #ffffff;
+}
+
+.background-rect {
+    -fx-fill: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+}
+
+.decorative-circle {
+    -fx-fill: linear-gradient(to bottom right, #007bff22, #dc354522);
+    -fx-arc-height: 300;
+    -fx-arc-width: 300;
+}
+
+.welcome-label {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 1, 0, 0, 1);
+}
+
+.info-label {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+.action-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-min-width: 200px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.action-button:hover {
+    -fx-background-color: #0056b3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 3);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.action-button:pressed {
+    -fx-background-color: #004085;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+#RegisterButton {
+    -fx-background-color: #dc3545;
+}
+
+#RegisterButton:hover {
+    -fx-background-color: #c82333;
+}
+
+#RegisterButton:pressed {
+    -fx-background-color: #bd2130;
+}
